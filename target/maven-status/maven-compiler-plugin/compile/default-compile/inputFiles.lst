@@ -1,0 +1,12 @@
+/Users/Vladimir/PageObjectFramework/src/main/java/ru/appline/framework/managers/TestPropManager.java
+/Users/Vladimir/PageObjectFramework/src/main/java/ru/appline/framework/managers/PageManager.java
+/Users/Vladimir/PageObjectFramework/src/main/java/ru/appline/framework/managers/InitManager.java
+/Users/Vladimir/PageObjectFramework/src/main/java/ru/appline/framework/pages/StartPage.java
+/Users/Vladimir/PageObjectFramework/src/main/java/ru/appline/framework/steps/Hooks.java
+/Users/Vladimir/PageObjectFramework/src/main/java/ru/appline/framework/pages/MortgagePage.java
+/Users/Vladimir/PageObjectFramework/src/main/java/ru/appline/framework/steps/MortgagePageStep.java
+/Users/Vladimir/PageObjectFramework/src/main/java/ru/appline/framework/steps/StartPageStep.java
+/Users/Vladimir/PageObjectFramework/src/main/java/ru/appline/framework/managers/DriverManager.java
+/Users/Vladimir/PageObjectFramework/src/main/java/ru/appline/framework/pages/BasePage.java
+/Users/Vladimir/PageObjectFramework/src/main/java/ru/appline/framework/utils/PropConst.java
+/Users/Vladimir/PageObjectFramework/src/main/java/ru/appline/framework/utils/MyAllureListener.java

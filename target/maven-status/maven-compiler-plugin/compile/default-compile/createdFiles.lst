@@ -1,0 +1,12 @@
+ru/appline/framework/managers/PageManager.class
+ru/appline/framework/utils/PropConst.class
+ru/appline/framework/steps/StartPageStep.class
+ru/appline/framework/pages/MortgagePage.class
+ru/appline/framework/managers/DriverManager.class
+ru/appline/framework/steps/Hooks.class
+ru/appline/framework/steps/MortgagePageStep.class
+ru/appline/framework/pages/BasePage.class
+ru/appline/framework/managers/InitManager.class
+ru/appline/framework/managers/TestPropManager.class
+ru/appline/framework/utils/MyAllureListener.class
+ru/appline/framework/pages/StartPage.class
