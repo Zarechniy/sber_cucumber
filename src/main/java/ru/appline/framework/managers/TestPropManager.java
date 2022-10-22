@@ -1,5 +1,7 @@
 package ru.appline.framework.managers;
 
+import ru.appline.framework.utils.PropConst;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -105,6 +107,10 @@ public class TestPropManager {
      * @return String - строка со значением ключа
      */
     public String getProperty(String key) {
-        return properties.getProperty(key);
+//        if (key.equals("remote")) {
+//            return PropConst.TYPE_BROWSER;
+//        } else {
+            return properties.getProperty(key);
+//        }
     }
 }
