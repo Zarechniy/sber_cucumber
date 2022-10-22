@@ -10,11 +10,11 @@ node {
         )
     }
     stage('Build') {
-        sh "${mvn} clean compile"
+        bat "${mvn} clean compile"
     }
     stage('Run Tests') {
         try {
-            sh "${mvn} test"
+            bat "${mvn} test"
         }
         catch (Exception e) {
             echo "Test run was broken"
