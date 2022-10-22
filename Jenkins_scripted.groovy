@@ -1,31 +1,31 @@
+def mvn = "/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven_3.8.6/bin/mvn"
 
-def mvn = "/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/3.8.3/bin/mvn"
+pipeline {
+    agent any
 
-node {
-    stage('Checkout SCM') {
-        checkout(
-                [$class: 'GitSCM',
-                 branches: [[name: "refs/heads/${BRANCH}"]],
-                 userRemoteConfigs: [[url: 'https://github.com/Zarechniy/sber_cucumber.git']]]
-        )
-    }
-    stage('Build') {
-        bat "${mvn} clean compile"
-    }
-    stage('Run Tests') {
-        try {
-            bat "${mvn} test"
+    stages {
+        stage('Build') {
+            steps {
+                git 'https://github.com/Zarechniy/sber_cucumber.git'
+
+                sh "${mvn} clean install"
+            }
         }
-        catch (Exception e) {
-            echo "Test run was broken"
-            throw e
+        stage('Running Test') {
+            steps {
+                sh "${mvn} test -Dcucumber.filter.tags=@all"
+            }
         }
-        finally {
-            stage('Allure Report Generation') {
+        stage("Allure reports"){
+            steps {
                 allure includeProperties: false,
                         jdk: '',
                         results: [[path: 'target/reports/allure-results']]
             }
+        }
+    }
+    post {
+        always {
             cleanWs notFailBuild: true
         }
     }

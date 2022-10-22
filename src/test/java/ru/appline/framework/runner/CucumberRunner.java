@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/scenario",
         glue = "ru.appline.framework.steps",
         tags = "@all",
-        plugin = "ru.appline.framework.utils.MyAllureListener"
+        plugin = "ru.appline.framework.utils.MyAllureListener"3
 )
 public class CucumberRunner {
 }
