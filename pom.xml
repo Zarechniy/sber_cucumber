@@ -125,7 +125,7 @@
                 <version>3.0.0-M5</version>
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
-                    <includes>**/CucumberRunnerTest.java</includes>
+                    <includes>**/*CucumberRunnerTest.java</includes>
                     <argLine>
                         -Xmx1024m
                         -Dfile.encoding=${encoding.type}

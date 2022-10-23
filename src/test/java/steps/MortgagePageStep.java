@@ -1,4 +1,4 @@
-package ru.appline.framework.steps;
+package steps;
 
 import io.cucumber.java.ru.И;
 import ru.appline.framework.managers.PageManager;
