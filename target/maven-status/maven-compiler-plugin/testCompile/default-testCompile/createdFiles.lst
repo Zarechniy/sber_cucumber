@@ -1,1 +1,4 @@
-ru/appline/framework/runner/CucumberRunner.class
+steps/MortgagePageStep.class
+steps/StartPageStep.class
+ru/appline/framework/runner/CucumberRunnerTest.class
+steps/Hooks.class

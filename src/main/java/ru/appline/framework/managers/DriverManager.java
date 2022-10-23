@@ -1,7 +1,7 @@
 package ru.appline.framework.managers;
 
 import org.apache.commons.exec.OS;
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -147,7 +147,7 @@ public class DriverManager {
                     }
                     break;
                 default:
-                    Assertions.fail("Типа браузера '" + props.getProperty(TYPE_BROWSER) + "' не существует во фреймворке");
+                    Assert.fail("Типа браузера '" + props.getProperty(TYPE_BROWSER) + "' не существует во фреймворке");
             }
     }
 

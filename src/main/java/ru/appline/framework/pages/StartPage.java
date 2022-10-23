@@ -1,7 +1,7 @@
 package ru.appline.framework.pages;
 
 import io.qameta.allure.Step;
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -32,7 +32,7 @@ public class StartPage extends BasePage {
             }
         }
 
-        Assertions.fail("Меню '" + nameBaseMenu + "' не было найдено на стартовой странице!");
+        Assert.fail("Меню '" + nameBaseMenu + "' не было найдено на стартовой странице!");
         return this;
     }
 
@@ -49,7 +49,7 @@ public class StartPage extends BasePage {
                 return app.getMortgagePage().checkOpenMortgagePage();
             }
         }
-        Assertions.fail("Подменю '" + nameSubMenu + "' не было найдено на стартовой странице!");
+        Assert.fail("Подменю '" + nameSubMenu + "' не было найдено на стартовой странице!");
         return app.getMortgagePage();
     }
 

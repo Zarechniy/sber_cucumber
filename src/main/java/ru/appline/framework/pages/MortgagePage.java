@@ -1,7 +1,7 @@
 package ru.appline.framework.pages;
 
 import io.qameta.allure.Step;
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -62,8 +62,8 @@ public class MortgagePage extends BasePage {
      */
     public MortgagePage checkOpenMortgagePage() {
         DriverManager.getDriver().manage().deleteAllCookies();
-        Assertions.assertEquals("Ипотека на вторичное жильё от 10,4%", pageTitle.getText(),
-                "Заголовок отсутствует/не соответствует требуемому");
+        Assert.assertEquals("Заголовок отсутствует/не соответствует требуемому",
+                "Ипотека на вторичное жильё от 10,4%", pageTitle.getText());
         return this;
     }
 
@@ -91,11 +91,10 @@ public class MortgagePage extends BasePage {
                 element = termOfMortgage;
                 break;
             default:
-                Assertions.fail("Поле с наименованием '" + nameField + "' отсутствует на странице " +
+                Assert.fail("Поле с наименованием '" + nameField + "' отсутствует на странице " +
                         "'Ипотека на вторичное жилье'");
         }
-        Assertions.assertEquals(value, element.getAttribute("value"),
-                "Поле '" + nameField + "' было заполнено некорректно");
+        Assert.assertEquals("Поле '" + nameField + "' было заполнено некорректно", value, element.getAttribute("value"));
         getDriver().switchTo().defaultContent();
         return this;
     }
@@ -160,7 +159,7 @@ public class MortgagePage extends BasePage {
                 checkIfInputAndOutputAreCorrect(percentOfMortgage, value);
                 break;
             default:
-                Assertions.fail("Поле с наименованием '" + nameField + "' отсутствует на странице " +
+                Assert.fail("Поле с наименованием '" + nameField + "' отсутствует на странице " +
                         "'Ипотека вторичное жилье'");
         }
         getDriver().switchTo().defaultContent();

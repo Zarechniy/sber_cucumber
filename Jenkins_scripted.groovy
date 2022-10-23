@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Running Test') {
             steps {
-                sh "${mvn} test -Dcucumber.filter.tags=@all"
+                sh "${mvn} test -Dcucumber.filter.tags=@firstTest"
             }
         }
         stage("Allure reports"){

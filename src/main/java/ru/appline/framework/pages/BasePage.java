@@ -1,6 +1,6 @@
 package ru.appline.framework.pages;
 
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -136,7 +136,7 @@ public class BasePage {
 
     public void checkIfInputAndOutputAreCorrect(WebElement field, int value) {
         int resultValue = Integer.parseInt(field.getText().replaceAll("[^0-9]", ""));
-        Assertions.assertEquals(value , resultValue,"Данные ввода и вывода не сходятся");
+        Assert.assertEquals("Данные ввода и вывода не сходятся", value , resultValue);
     }
 
     /**

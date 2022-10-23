@@ -1,1 +1,4 @@
-/Users/Vladimir/PageObjectFramework/src/test/java/ru/appline/framework/runner/CucumberRunner.java
+/Users/Vladimir/PageObjectFramework/src/test/java/steps/StartPageStep.java
+/Users/Vladimir/PageObjectFramework/src/test/java/steps/MortgagePageStep.java
+/Users/Vladimir/PageObjectFramework/src/test/java/ru/appline/framework/runner/CucumberRunnerTest.java
+/Users/Vladimir/PageObjectFramework/src/test/java/steps/Hooks.java
